@@ -1,12 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/Form";
+import TodoList from "./components/TodoList";
+import Footer from "./components/Footer";
 
-function App() {  
+
+// Başlangıç için liste elemanımız
+const initialState = [
+  {
+    id:1,
+    text:"Code",
+    completed:true
+  }
+]
+function App() {
+  // Listelemek istediğimiz todos elemaları
+  const [todos,setTodos] = useState(initialState); 
   return (
-    <div className="App">
-      
-    </div>
-  )
+    <section className="todoapp">
+      <Form  todos={todos} setTodos={setTodos}/>
+      <TodoList todos={todos} />
+      <Footer />
+    </section>
+  );
 }
 
-export default App
+export default App;
