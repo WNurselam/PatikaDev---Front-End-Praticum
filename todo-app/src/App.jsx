@@ -19,8 +19,8 @@ function App() {
   return (
     <section className="todoapp">
       <Form  todos={todos} setTodos={setTodos}/>
-      <TodoList todos={todos} />
-      <Footer />
+      <TodoList todos={todos} setTodos={setTodos} />
+      <Footer todos={todos} setTodos={setTodos} />
     </section>
   );
 }

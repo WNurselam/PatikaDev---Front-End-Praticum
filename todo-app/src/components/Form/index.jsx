@@ -15,7 +15,7 @@ const Form = (props) => {
       setTodos([   
         ...todos,
         {
-          id: Math.random(),  // Her todo elemanı için rastgele id alıyoruz.
+          id:Math.random(),  // Her todo elemanı için rastgele id alıyoruz.
           text: value,       // input değerini text içerisine atıyoruz.
           completed: false, // tamamlanıp tamamlanmadığına bakıyoruz.
          

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { todos } = props;
+
   return (
-    <div>
       <footer className="footer">
         <span className="todo-count">
-          <strong>2</strong>
+          <strong>{todos.length}</strong>
           items left
         </span>
-
         <ul className="filters">
           <li>
             <a href="#/" className="selected">
@@ -25,7 +25,6 @@ const Footer = () => {
 
         <button className="clear-completed">Clear completed</button>
       </footer>
-    </div>
   );
 };
 export default Footer;
