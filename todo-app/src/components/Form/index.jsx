@@ -5,12 +5,12 @@ const Form = (props) => {
   const [value, setValue] = useState("");
 
   const addList = (e) => {
+    e.preventDefault(); // Form kayıt edildikten sonra sürekli yenilenmemesi için.
     if (value === "") {
       // Form'un içerisi boş ise göndermemesini istiyoruz
       return false;
     } else {
-      e.preventDefault(); // Form kayıt edildikten sonra sürekli yenilenmemesi için.
-
+      
       // Önceki ...todos(todos) değerlerini koruyoruz sonra yeni değerlerin atamasını yapıyoruz
       setTodos([   
         ...todos,

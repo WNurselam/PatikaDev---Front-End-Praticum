@@ -11,9 +11,15 @@ const TodoList = (props) => {
       // checkTodo'dan alınan kontrol'ü todos'a atıyoruz
   };
 
+  
+  // Listelenen todoslardan ve atadığımız id'si eşit olmayanı silmek istiyoruz.
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo)=>todo.id !== id))
+  }
+
   return (
     <section className="main">
-      <input className="toggle-all" type="checkbox" />
+      <input className="toggle-all" type="checkbox"  />
       <label htmlFor="toggle-all">Mark all as complete</label>
       <ul className="todo-list">
         {todos.map((todo) => (
@@ -26,7 +32,7 @@ const TodoList = (props) => {
                 onChange={() => changeBox(todo.id)}
               />
               <label>{todo.text}</label>
-              <button className="destroy"></button>
+              <button className="destroy" onClick={() =>deleteTodo(todo.id)}></button>
             </div>
           </li>
         ))}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Footer = (props) => {
+  const [select,setSelect] = useState("all");
   const { todos } = props;
 
   return (
