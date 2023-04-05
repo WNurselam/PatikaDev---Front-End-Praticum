@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const Form = (props) => {
   const { todos, setTodos } = props; // App.js içerisinden aldığımız todos propları
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("");// input value değerini tutan state'imiz
 
   const addList = (e) => {
     e.preventDefault(); // Form kayıt edildikten sonra sürekli yenilenmemesi için.
