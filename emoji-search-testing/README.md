@@ -1,6 +1,6 @@
 
 
-![alt text](/public/ss-test.png)
+![emoji](./public//ss-test.png)
 
 ### `npm start`
 
